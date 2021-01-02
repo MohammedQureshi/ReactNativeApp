@@ -1,21 +1,17 @@
 import React from 'react';
 import { ImageBackground, StyleSheet, View, Text, Image, Button, Alert, TouchableOpacity } from 'react-native';
+import NavigationBar from './NavigationBar';
 
-export function WelcomeScreen({navigation}){
-    return(
+export function MainViewScreen(){
+    return (
         <ImageBackground 
         style={styles.background}
         source={require("../assets/background.jpg")}>
+            <NavigationBar />
             <View style={styles.logoContainer}>
                 <Image style={styles.logo} source={require('../assets/logo.png')}/>
                 <Text style={styles.subTitle}>Mohammed Faisal Qureshi</Text>
             </View>
-            <TouchableOpacity onPress={() => Alert.alert('Login Button Pressed')} style={styles.loginButtonContainer}>
-                <Text style={styles.appButtonText}>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('MainViewScreen')} style={styles.registerButtonContainer}>
-                <Text style={styles.appButtonText}>Register</Text>
-            </TouchableOpacity>
         </ImageBackground>
     );
 }
