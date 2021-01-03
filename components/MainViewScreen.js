@@ -4,15 +4,13 @@ import NavigationBar from './NavigationBar';
 
 export function MainViewScreen(){
     return (
-        <ImageBackground 
-        style={styles.background}
-        source={require("../assets/background.jpg")}>
-            <NavigationBar />
-            <View style={styles.logoContainer}>
+
+        <View style={styles.logoContainer}>
+                <NavigationBar />
                 <Image style={styles.logo} source={require('../assets/logo.png')}/>
                 <Text style={styles.subTitle}>Mohammed Faisal Qureshi</Text>
             </View>
-        </ImageBackground>
+
     );
 }
 
@@ -32,7 +30,7 @@ const styles = StyleSheet.create({
         color: '#52504f',
     },
     logoContainer:{
-        position: 'absolute',
+        position: 'center',
         top: 200, 
         alignItems: 'center',
     },
